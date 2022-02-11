@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "Warnya",
+    "slug": "warnya",
+    "version": "3.1.3",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/warnya_splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+  
+    
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.warnya.warnya",
+      "config":{
+        "googleMobileAdsAppId":"ca-app-pub-5356140400244515~9512698448"
+      },
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app use camera to capture picture for your profile picture and  to upload photos from your camera app and/or scan QR codes used for group invite",
+        "UIInterfaceOrientationPortrait": true,
+        "UIRequiresFullScreen": true
+      }
+    },
+    "android": {
+      "googleServicesFile": "./google-services.json",
+      "useNextNotificationsApi":true,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#FFFFFF"
+       
+      },
+            "package": "com.warnya.warnya",
+      "config":{
+        "googleMobileAdsAppId":"ca-app-pub-5356140400244515~8134102390"
+      },
+      "versionCode": 5
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "description": ""
+  }
+}
