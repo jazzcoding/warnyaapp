@@ -156,185 +156,215 @@ export async function english() {
   global.textGroupDoesNotExist = "Group does not exist";
   global.textInvialidQRImage = "INVALID QR IMAGE";
   global.textUseImageFromLibrary = "USE IMAGE FROM LIBRARY";
+  global.textImageWasSuccessfullyDownloaded =
+    "Image was successfully downloaded";
+  global.saveQRCodeToGallery = "Save QR Code to gallery";
+  global.textLanguageSuccess = "You have successfully changed your language";
+
+  global.textPermissionNotGrantd =
+    " PERMISSION TO ACCESS YOUR CAMERA IS NOT GRANDTED";
+  global.textPermissionGoToSettings =
+    "Please go to settings to accept the camera permission.";
+  global.textSettings = "Settings";
+  global.textRefresh = "Refresh";
+  global.textPleaseWait = "Please wait...";
 }
 
 export async function deutsch() {
-  global.textWasRecentlyCreated = "wurde kürzlich erzeugt";
-  global.typeAgroupNameorScanQR =
-    "Geben Sie einen Gruppennamen ein oder scannen Sie den QR-Code.";
-  global.textAlert = "Alarm";
-  global.chooseYourLanguage = "Wählen Sie Ihre Sprache.";
-  global.buttonContiue = "Weiter";
-  global.language = "Sprache";
-  global.apply = "Anwenden";
-  global.inbox = "Posteingang";
-  global.editProfile = "Profil bearbeiten";
-  global.contactUs = "Kontaktieren Sie uns";
-  global.accountSettings = "Kontoeinstellungen";
-  global.upgradeToPro = "Upgrade auf PRO";
-  global.logout = "LOG OUT";
-  //Startseite
-  global.read = "lesen";
-  global.unread = "ungelesen";
-  global.searchText = "suchen";
-  // different first letters, idk what’s right
-  global.textDelete = "LÖSCHEN";
-  // ö or oe
-  global.textDeleteMessage =
-    "Diese Aktion kann nicht rückgängig gemacht werden. Gelöschte Nachricht können nicht wiederhergestellt werden. Fortfahren?";
-  global.makeSureQrCode = "STELLEN SIE SICHER, DASS DER QR-CODE IM RAHMEN IST.";
-  global.newestFirst = "Neueste zuerst";
-  global.oldestFirst = "Älteste zuerst";
-  //Profil bearbeiten
-  global.alertErrorTitle = "FEHLER!";
-  global.alertErrorMessage = "Das Textfeld darf nicht leer sein.";
-  global.alertSuccessTitle = "ERFOLG!";
-  // maybe Fertig! = done?
-  global.alertSuccessMessage = "Sie haben Ihr Profil erfolgreich aktualisiert.";
-  global.alertPermissionToCamera =
-    "Entschuldigung, wir brauchen die Kamera-Berechtigungen, damit das funktioniert!";
-  global.alertCatch =
-    "Unerwarteter Fehler ist aufgetreten, bitte versuchen Sie es erneut.";
-  global.textUsername = "Benutzername";
-  global.textFirstName = "Vorname";
-  global.textLastName = "Nachname";
-  global.buttonTitle = "PROFIL SPEICHERN";
-  global.ok = "OK";
-  //Account Einstellungen
-  global.textPhone = "Telefon";
-  global.textEmail = "E-Mail";
-  global.textPassword = "Passwort";
-  global.textPreferences = "Einstellungen";
-  global.textPreferencesMessage =
-    "Deaktivieren Sie es, wenn Sie sich lieber von der Gruppeneinladung abmelden möchten.";
-  // es / dies? what
-  global.textDeleteAccount = "Konto dauerhaft löschen";
-  global.textDeleteAccountMessage =
-    "Sobald das Konto gelöscht wurde, können Sie Ihr Konto nicht reaktivieren oder Inhalte oder Informationen, die Sie hinzugefügt haben, abrufen.";
-  global.buttonDeleteAccountPermanently = "Konto dauerhaft löschen";
-  global.buttonSaveSettings = "EINSTELLUNGEN SPEICHERN";
-  //textInputErrorMessageAndAlert
-  global.textErrorEmail = "Bitte geben Sie eine gültige E-Mail-Adresse ein.";
-  global.textErrorPhone = "Bitte geben Sie eine gültige Telefonnummer ein.";
-  global.textErrorPassword = "Bitte geben Sie ein gültiges Passwort ein.";
-  global.alertButtonYes = "Ja";
-  global.alertButtonNo = "Nein";
-  global.alertConfirmDeleteAccount =
-    "Sind Sie sicher, dass Sie Ihr Konto löschen möchten?";
-  global.alertConfimAutomaticallyLoggedOut =
-    "Sie werden automatisch abgemeldet, wenn Sie Ihre Einstellungen aktualisieren.";
-  // not sure what that means
+  try {
+    global.textWasRecentlyCreated = "wurde kürzlich erzeugt";
+    global.typeAgroupNameorScanQR =
+      "Geben Sie einen Gruppennamen ein oder scannen Sie den QR-Code.";
+    global.textAlert = "Alarm";
+    global.chooseYourLanguage = "Wählen Sie Ihre Sprache.";
+    global.buttonContiue = "Weiter";
+    global.language = "Sprache";
+    global.apply = "Anwenden";
+    global.inbox = "Posteingang";
+    global.editProfile = "Profil bearbeiten";
+    global.contactUs = "Kontaktieren Sie uns";
+    global.accountSettings = "Kontoeinstellungen";
+    global.upgradeToPro = "Upgrade auf PRO";
+    global.logout = "LOG OUT";
+    //Startseite
+    global.read = "lesen";
+    global.unread = "ungelesen";
+    global.searchText = "suchen";
+    // different first letters, idk what’s right
+    global.textDelete = "LÖSCHEN";
+    // ö or oe
+    global.textDeleteMessage =
+      "Diese Aktion kann nicht rückgängig gemacht werden. Gelöschte Nachricht können nicht wiederhergestellt werden. Fortfahren?";
+    global.makeSureQrCode =
+      "STELLEN SIE SICHER, DASS DER QR-CODE IM RAHMEN IST.";
+    global.newestFirst = "Neueste zuerst";
+    global.oldestFirst = "Älteste zuerst";
+    //Profil bearbeiten
+    global.alertErrorTitle = "FEHLER!";
+    global.alertErrorMessage = "Das Textfeld darf nicht leer sein.";
+    global.alertSuccessTitle = "ERFOLG!";
+    // maybe Fertig! = done?
+    global.alertSuccessMessage =
+      "Sie haben Ihr Profil erfolgreich aktualisiert.";
+    global.alertPermissionToCamera =
+      "Entschuldigung, wir brauchen die Kamera-Berechtigungen, damit das funktioniert!";
+    global.alertCatch =
+      "Unerwarteter Fehler ist aufgetreten, bitte versuchen Sie es erneut.";
+    global.textUsername = "Benutzername";
+    global.textFirstName = "Vorname";
+    global.textLastName = "Nachname";
+    global.buttonTitle = "PROFIL SPEICHERN";
+    global.ok = "OK";
+    //Account Einstellungen
+    global.textPhone = "Telefon";
+    global.textEmail = "E-Mail";
+    global.textPassword = "Passwort";
+    global.textPreferences = "Einstellungen";
+    global.textPreferencesMessage =
+      "Deaktivieren Sie es, wenn Sie sich lieber von der Gruppeneinladung abmelden möchten.";
+    // es / dies? what
+    global.textDeleteAccount = "Konto dauerhaft löschen";
+    global.textDeleteAccountMessage =
+      "Sobald das Konto gelöscht wurde, können Sie Ihr Konto nicht reaktivieren oder Inhalte oder Informationen, die Sie hinzugefügt haben, abrufen.";
+    global.buttonDeleteAccountPermanently = "Konto dauerhaft löschen";
+    global.buttonSaveSettings = "EINSTELLUNGEN SPEICHERN";
+    //textInputErrorMessageAndAlert
+    global.textErrorEmail = "Bitte geben Sie eine gültige E-Mail-Adresse ein.";
+    global.textErrorPhone = "Bitte geben Sie eine gültige Telefonnummer ein.";
+    global.textErrorPassword = "Bitte geben Sie ein gültiges Passwort ein.";
+    global.alertButtonYes = "Ja";
+    global.alertButtonNo = "Nein";
+    global.alertConfirmDeleteAccount =
+      "Sind Sie sicher, dass Sie Ihr Konto löschen möchten?";
+    global.alertConfimAutomaticallyLoggedOut =
+      "Sie werden automatisch abgemeldet, wenn Sie Ihre Einstellungen aktualisieren.";
+    // not sure what that means
 
-  global.textBack = "ZURÜCK";
-  //kontaktierenUS
-  global.btnaAskQuestion = "Eine Frage stellen";
-  global.btnSuggestIdeas = "Ideen vorschlagen";
-  global.btnReportBug = "Fehler melden";
-  global.btnVisitOurSite = "Sozialen Medien";
-  //Gruppe erstellen
-  global.textNameOfGroup = "Name der Gruppe";
-  global.textTypeYourGroupNameHere = "Geben Sie hier Ihren Gruppennamen ein.";
-  global.textSelectImage = "Bild auswählen (optional)";
-  global.btnContinue = "Weiter";
-  global.textPleaseEnterGroupName = "Bitte geben Sie den Gruppennamen ein.";
-  global.textCreateGroup = "Gruppe Erstellen";
-  //Gruppe suchen
-  global.textSearchGroup = "Gruppe suchen";
-  global.textNoGroupFound = "Keine Gruppe gefunden.";
-  //Nachricht senden
-  global.textViewParticipants = "Teilnehmer anzeigen";
-  global.textInviteParticipants = "Teilnehmer einladen";
-  global.textWriteAMessage = "Nachricht schreiben";
-  global.textKick = "Rauswerfen";
-  // Rauswerfen?
-  global.textViewProfile = "Profil anzeigen";
-  //Teilnehmer anzeigen
-  global.textParticipants = "Teilnehmer";
-  global.textRemove = "ENTFERNEN";
-  global.textConfirmRemove =
-    "Möchten Sie diesen Benutzer aus Ihrer Gruppe entfernen?";
-  global.textCancel = "CANCEL";
-  // Teilnehmer einladen
-  global.textAddParticipants = "Teilnehmer einladen";
-  global.textInvite = "Einladen";
-  global.textSuccesfullyInvited = "Erfolgreich eingeladen.";
-  global.textUserIsAlreadyInTheGroup =
-    "Dieser Benutzer ist bereits in der Gruppe.";
-  global.textDone = "FERTIG";
-  global.selectParticipantToJoin =
-    "Teilnehmer auswählen, die der Gruppe beizutreten.";
-  // “Teilnehmer hinzufügen”
-  global.sendInviteLink = "Einladungslink teilen";
-  //Gruppeneinstellungen
-  global.textParticipantMessages = "Teilnehmernachrichten";
-  // “Nachrichten”
-  global.textAllow = "Zulassen";
-  global.textDontAllow = "Nicht zulassen";
-  global.textSelectVisibility = "Sichtbarkeit auswählen (erforderlich)";
-  global.textPublic = "Öffentlich";
-  global.textPrivate = "Privat";
-  global.textContinue = "Weiter";
-  global.textGroupSettings = "Gruppeneinstellungen";
-  //Teilnehmer auswählen
-  global.textChooseParticipants = "Teilnehmer auswählen";
-  global.textNoUserFound = "Keinen Benutzer gefunden";
-  // Diesen Benuter nicht gefunden
-  // Ein Benutzer mit diesem Nutzer wurde nicht gefunden.
-  global.textUserAlreadyAdded = "Benutzer wurde bereits hinzugefügt.";
-  // Dieser
-  global.textSuccessCreatedGroup = "Sie haben erfolgreich die Gruppe erstellt.";
-  //Profil anzeigen
-  global.textMemberSince = "Mitglied seit";
-  //Neue Nachricht
-  global.textWriteMessage = "Nachricht schreiben";
-  global.textMessage = "NACHRICHT";
-  global.textSend = "SENDEN";
-  global.textWriteYourMessage = "Schreiben Sie hier Ihre Nachricht.";
-  global.textSuccessMessage = `Sie haben erfolgreich eine Nachricht gesendet.`;
-  //fastMessage
-  global.textPleaseSelectWarning = "Bitte Warnstufe auswählen";
-  // die
-  global.textPleaseEnterAYourMessage = "Bitte geben Sie Ihre Nachricht ein.";
-  global.textPleaseSelectAGroup = "Bitte wählen Sie eine Gruppe aus.";
-  global.textPleaseEnterValidTime =
-    "Bitte geben Sie ein gültiges Datum und eine gültige Uhrzeit ein.";
-  global.textSuccessSentMessage = "Die Nachricht wurde erfolgreich gesendet.";
-  global.textFastMessage = "Schnelle Nachricht";
-  // Kurznachricht maybe
-  global.textTypeAMessage = "Geben Sie eine Nachricht ein.";
-  global.textDuration = "DAUER";
-  global.textDurationMessage =
-    "Wählen Sie Datum und Uhrzeit aus, zu der Ihre Nachricht für die Teilnehmer sichtbar sein wird.";
-  global.textWarningLevel = "WARNSTUFE AUSWÄHLEN";
-  global.textSendNow = "JETZT SENDEN";
-  global.textSelectAgroup = "EINE GRUPPE WÄHLEN";
+    global.textBack = "ZURÜCK";
+    //kontaktierenUS
+    global.btnaAskQuestion = "Eine Frage stellen";
+    global.btnSuggestIdeas = "Ideen vorschlagen";
+    global.btnReportBug = "Fehler melden";
+    global.btnVisitOurSite = "Sozialen Medien";
+    //Gruppe erstellen
+    global.textNameOfGroup = "Name der Gruppe";
+    global.textTypeYourGroupNameHere = "Geben Sie hier Ihren Gruppennamen ein.";
+    global.textSelectImage = "Bild auswählen (optional)";
+    global.btnContinue = "Weiter";
+    global.textPleaseEnterGroupName = "Bitte geben Sie den Gruppennamen ein.";
+    global.textCreateGroup = "Gruppe Erstellen";
+    //Gruppe suchen
+    global.textSearchGroup = "Gruppe suchen";
+    global.textNoGroupFound = "Keine Gruppe gefunden.";
+    //Nachricht senden
+    global.textViewParticipants = "Teilnehmer anzeigen";
+    global.textInviteParticipants = "Teilnehmer einladen";
+    global.textWriteAMessage = "Nachricht schreiben";
+    global.textKick = "Rauswerfen";
+    // Rauswerfen?
+    global.textViewProfile = "Profil anzeigen";
+    //Teilnehmer anzeigen
+    global.textParticipants = "Teilnehmer";
+    global.textRemove = "ENTFERNEN";
+    global.textConfirmRemove =
+      "Möchten Sie diesen Benutzer aus Ihrer Gruppe entfernen?";
+    global.textCancel = "CANCEL";
+    // Teilnehmer einladen
+    global.textAddParticipants = "Teilnehmer einladen";
+    global.textInvite = "Einladen";
+    global.textSuccesfullyInvited = "Erfolgreich eingeladen.";
+    global.textUserIsAlreadyInTheGroup =
+      "Dieser Benutzer ist bereits in der Gruppe.";
+    global.textDone = "FERTIG";
+    global.selectParticipantToJoin =
+      "Teilnehmer auswählen, die der Gruppe beizutreten.";
+    // “Teilnehmer hinzufügen”
+    global.sendInviteLink = "Einladungslink teilen";
+    //Gruppeneinstellungen
+    global.textParticipantMessages = "Teilnehmernachrichten";
+    // “Nachrichten”
+    global.textAllow = "Zulassen";
+    global.textDontAllow = "Nicht zulassen";
+    global.textSelectVisibility = "Sichtbarkeit auswählen (erforderlich)";
+    global.textPublic = "Öffentlich";
+    global.textPrivate = "Privat";
+    global.textContinue = "Weiter";
+    global.textGroupSettings = "Gruppeneinstellungen";
+    //Teilnehmer auswählen
+    global.textChooseParticipants = "Teilnehmer auswählen";
+    global.textNoUserFound = "Keinen Benutzer gefunden";
+    // Diesen Benuter nicht gefunden
+    // Ein Benutzer mit diesem Nutzer wurde nicht gefunden.
+    global.textUserAlreadyAdded = "Benutzer wurde bereits hinzugefügt.";
+    // Dieser
+    global.textSuccessCreatedGroup =
+      "Sie haben erfolgreich die Gruppe erstellt.";
+    //Profil anzeigen
+    global.textMemberSince = "Mitglied seit";
+    //Neue Nachricht
+    global.textWriteMessage = "Nachricht schreiben";
+    global.textMessage = "NACHRICHT";
+    global.textSend = "SENDEN";
+    global.textWriteYourMessage = "Schreiben Sie hier Ihre Nachricht.";
+    global.textSuccessMessage = `Sie haben erfolgreich eine Nachricht gesendet.`;
+    //fastMessage
+    global.textPleaseSelectWarning = "Bitte Warnstufe auswählen";
+    // die
+    global.textPleaseEnterAYourMessage = "Bitte geben Sie Ihre Nachricht ein.";
+    global.textPleaseSelectAGroup = "Bitte wählen Sie eine Gruppe aus.";
+    global.textPleaseEnterValidTime =
+      "Bitte geben Sie ein gültiges Datum und eine gültige Uhrzeit ein.";
+    global.textSuccessSentMessage = "Die Nachricht wurde erfolgreich gesendet.";
+    global.textFastMessage = "Schnelle Nachricht";
+    // Kurznachricht maybe
+    global.textTypeAMessage = "Geben Sie eine Nachricht ein.";
+    global.textDuration = "DAUER";
+    global.textDurationMessage =
+      "Wählen Sie Datum und Uhrzeit aus, zu der Ihre Nachricht für die Teilnehmer sichtbar sein wird.";
+    global.textWarningLevel = "WARNSTUFE AUSWÄHLEN";
+    global.textSendNow = "JETZT SENDEN";
+    global.textSelectAgroup = "EINE GRUPPE WÄHLEN";
 
-  global.textForSemiImportantMessage = "Nur für halbwichtige Nachrichten";
-  // weird word, half important?
-  global.textForUnImportantMessage = "Nur für unwichtige Nachrichten";
-  global.textForImportantMessage = "Nur für wichtige Nachrichten";
+    global.textForSemiImportantMessage = "Nur für halbwichtige Nachrichten";
+    // weird word, half important?
+    global.textForUnImportantMessage = "Nur für unwichtige Nachrichten";
+    global.textForImportantMessage = "Nur für wichtige Nachrichten";
 
-  global.textSubscriptionStatus = "ABONNEMENT-STATUS";
-  global.textTitle = "Titel";
-  global.textStatus = "Status";
-  global.textExpiryDate = "Verfallsdatum";
-  // literally for groceries, but ok
-  global.textExpired = "Abgelaufen";
-  // “Nicht mehr verfügbar.”
-  global.textYearlySubscription = "Jährliches Abonnement";
-  global.textRenew = "Erneuern";
-  global.textBenefits = "VORTEILE DES PREMIUM-KONTOS";
-  global.textPremiumSupportAccess = "Zugang zum Premium-Support";
-  global.textAddFreeExperience = "Werbefreie Erfahrung";
-  global.textActive = "Aktiv";
-  global.textCardNumber = "Kartennummer";
-  global.textPay = "Bezahlen";
-  global.textTotal = "GESAMT";
-  global.textGoNow = "JETZT GEHEN";
-  global.textChooseLanguage = "Sprache wählen";
-  global.textGroupDoesNotExist = "Gruppe existiert nicht";
-  global.textInvialidQRImage = "UNGÜLTIGES QR-BILD";
-  global.textUseImageFromLibrary = "BILD AUS BIBLIOTHEK VERWENDEN";
+    global.textSubscriptionStatus = "ABONNEMENT-STATUS";
+    global.textTitle = "Titel";
+    global.textStatus = "Status";
+    global.textExpiryDate = "Verfallsdatum";
+    // literally for groceries, but ok
+    global.textExpired = "Abgelaufen";
+    // “Nicht mehr verfügbar.”
+    global.textYearlySubscription = "Jährliches Abonnement";
+    global.textRenew = "Erneuern";
+    global.textBenefits = "VORTEILE DES PREMIUM-KONTOS";
+    global.textPremiumSupportAccess = "Zugang zum Premium-Support";
+    global.textAddFreeExperience = "Werbefreie Erfahrung";
+    global.textActive = "Aktiv";
+    global.textCardNumber = "Kartennummer";
+    global.textPay = "Bezahlen";
+    global.textTotal = "GESAMT";
+    global.textGoNow = "JETZT GEHEN";
+    global.textChooseLanguage = "Sprache wählen";
+    global.textGroupDoesNotExist = "Gruppe existiert nicht";
+    global.textInvialidQRImage = "UNGÜLTIGES QR-BILD";
+    global.textUseImageFromLibrary = "BILD AUS BIBLIOTHEK VERWENDEN";
+    global.textImageWasSuccessfullyDownloaded =
+      "Bild wurde erfolgreich heruntergeladen";
+    global.saveQRCodeToGallery = "QR-Code in Galerie speichern";
+    global.textLanguageSuccess = "Sie haben Ihre Sprache erfolgreich geändert";
+    global.textPermissionNotGrantd =
+      " DIE BERECHTIGUNG ZUM ZUGRIFF AUF IHRE KAMERA WIRD NICHT GEWÄHRT";
+    global.textPermissionGoToSettings =
+      "Bitte gehen Sie zu den Einstellungen, um die Kameraerlaubnis zu akzeptieren.";
+    global.textSettings = "Einstellungen";
+    global.textRefresh = "Aktualisieren";
+    global.textPleaseWait = "Bitte warten...";
+  } catch (err) {
+    console.log("LANGUAGE DEUTSCH ERROR");
+  }
 }
 export async function dutch() {
   global.textWasRecentlyCreated = "is onlangs gemaakt";
@@ -492,6 +522,19 @@ export async function dutch() {
   global.textGroupDoesNotExist = "Groep bestaat niet";
   global.textInvialidQRImage = "ONGELDIGE QR-BEELD";
   global.textUseImageFromLibrary = "GEBRUIK AFBEELDING UIT BIBLIOTHEEK";
+
+  global.textImageWasSuccessfullyDownloaded =
+    "Afbeelding is succesvol gedownload";
+  global.saveQRCodeToGallery = "Sla QR-code op in galerij";
+  global.textLanguageSuccess = "U heeft uw taal succesvol gewijzigd";
+
+  global.textPermissionNotGrantd =
+    " TOEGANG OM TOEGANG TE KRIJGEN TOT UW CAMERA WORDT NIET TOEGEKEND";
+  global.textPermissionGoToSettings =
+    "Ga naar instellingen om de cameratoestemming te accepteren.";
+  global.textSettings = "Instellingen";
+  global.textRefresh = "Vernieuwen";
+  global.textPleaseWait = "Een ogenblik geduld...";
 }
 
 export async function french() {
@@ -655,6 +698,17 @@ export async function french() {
   global.textGroupDoesNotExist = "Le groupe n'existe pas";
   global.textInvialidQRImage = "IMAGE QR INVALIDE";
   global.textUseImageFromLibrary = "UTILISER L'IMAGE DE LA BIBLIOTHÈQUE";
+  global.textImageWasSuccessfullyDownloaded =
+    "L'image a été téléchargée avec succès";
+  global.saveQRCodeToGallery = "Enregistrer le code QR dans la galerie";
+  global.textLanguageSuccess = "Vous avez changé de langue avec succès";
+  global.textPermissionNotGrantd =
+    "LA PERMISSION D'ACCÉDER À VOTRE APPAREIL PHOTO N'EST PAS ACCORDÉE";
+  global.textPermissionGoToSettings =
+    "Veuillez accéder aux paramètres pour accepter l'autorisation de la caméra.";
+  global.textSettings = "Paramètres";
+  global.textRefresh = "Actualiser";
+  global.textPleaseWait = "Veuillez patienter...";
 }
 
 export async function italian() {
@@ -814,4 +868,15 @@ export async function italian() {
   global.textGroupDoesNotExist = "Il gruppo non esiste";
   global.textInvialidQRImage = "IMMAGINE QR NON VALIDA";
   global.textUseImageFromLibrary = "UTILIZZA IMMAGINE DALLA BIBLIOTECA";
+  global.textImageWasSuccessfullyDownloaded =
+    "L'immagine è stata scaricata con successo";
+  global.saveQRCodeToGallery = "Salva codice QR nella galleria";
+  global.textLanguageSuccess = "Hai cambiato lingua con successo";
+  global.textPermissionNotGrantd =
+    "IL PERMESSO DI ACCEDERE ALLA TUA FOTOCAMERA NON È CONCESSO";
+  global.textPermissionGoToSettings =
+    "Vai alle impostazioni per accettare l'autorizzazione della fotocamera.";
+  global.textSettings = "Impostazioni";
+  global.textRefresh = "Aggiorna";
+  global.textPleaseWait = "Attendere...";
 }

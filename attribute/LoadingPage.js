@@ -66,7 +66,7 @@ const LoadingPage = () => {
           color: global.textWhiteColor,
         }}
       >
-        Please wait...
+        {global.textPleaseWait}
       </Text>
     </View>
   );

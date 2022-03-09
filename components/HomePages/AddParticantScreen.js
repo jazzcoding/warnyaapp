@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   FlatList,
   Text,
@@ -6,7 +6,9 @@ import {
   StyleSheet,
   Alert,
   Dimensions,
+  Share,
 } from "react-native";
+
 import * as firebase from "firebase";
 import "firebase/firestore";
 import "../../db/global";
@@ -16,6 +18,8 @@ import { useIsFocused } from "@react-navigation/core";
 import LoadingPage from "../../attribute/LoadingPage";
 import { ScrollView } from "react-native-gesture-handler";
 import QRCodeProps from "react-native-qrcode-svg";
+import ViewShot from "react-native-view-shot";
+import * as MediaLibrary from "expo-media-library";
 const AddParticipantScreen = ({ route, navigation }) => {
   const isFocused = useIsFocused();
   const [isLoading, setIsLoading] = React.useState(true);
@@ -25,12 +29,28 @@ const AddParticipantScreen = ({ route, navigation }) => {
   const currentUser = firebase.auth().currentUser;
   const windowHeight = Dimensions.get("screen").height;
   const windowWidth = Dimensions.get("screen").width;
+  const viewShot = useRef(null);
   React.useEffect(() => {
     setUsers([]);
     setUserInTheGroup([]);
     setItem(route.params.item);
     getUserInTheGroup(route.params.item.CHATDETAILS.key);
   }, [isFocused]);
+
+  const onSave = () => {
+    viewShot.current.capture().then((uri) => {
+      try {
+        MediaLibrary.saveToLibraryAsync(uri);
+        Alert.alert(
+          global.alertSuccessTitle,
+          global.textImageWasSuccessfullyDownloaded,
+          [{ text: "Ok", onPress: () => console.log("No") }]
+        );
+      } catch (err) {
+        alert(global.alertCatch);
+      }
+    });
+  };
 
   const userExists = (id) => {
     return userInTheGroup.some(function (el) {
@@ -245,14 +265,43 @@ const AddParticipantScreen = ({ route, navigation }) => {
         >
           {global.sendInviteLink}
         </Text>
-        <View style={{ alignSelf: "center", padding: 20 }}>
-          <QRCodeProps
-            value={route.params.item.CHATDETAILS.key}
-            logo={require("../../assets/icon.png")}
-            size={200}
-          />
-        </View>
-
+        <ViewShot
+          ref={viewShot}
+          options={{
+            width: "100%",
+            height: "100%",
+            format: "jpg",
+            quality: 1.0,
+          }}
+        >
+          <View
+            style={{
+              alignSelf: "center",
+              padding: 20,
+              backgroundColor: "white",
+            }}
+          >
+            <QRCodeProps
+              value={route.params.item.CHATDETAILS.key}
+              logo={require("../../assets/icon.png")}
+              size={200}
+            />
+          </View>
+        </ViewShot>
+        <Text
+          onPress={() => {
+            onSave();
+          }}
+          style={{
+            color: "#2F7FEB",
+            padding: 5,
+            alignSelf: "center",
+            textDecorationLine: "underline",
+            fontWeight: "bold",
+          }}
+        >
+          {global.saveQRCodeToGallery}
+        </Text>
         <Button
           title={global.textDone}
           type="solid"
@@ -267,6 +316,7 @@ const AddParticipantScreen = ({ route, navigation }) => {
     </ScrollView>
   );
 };
+
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#fff",

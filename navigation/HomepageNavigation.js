@@ -27,12 +27,19 @@ import { italian } from "../HelperClass/Language";
 import { french } from "../HelperClass/Language";
 import { dutch } from "../HelperClass/Language";
 import { deutsch } from "../HelperClass/Language";
-
 const HomepageNavigation = () => {
+  const [accountSettingsText, setAccountSettingsText] = React.useState("");
+  const [editProfileText, setEditProfileText] = React.useState("");
+  const [languageText, setLanguageText] = React.useState("");
+  const [contactUsText, setContactUsText] = React.useState("");
   const Drawer = createDrawerNavigator();
-  const currentUser = firebase.auth().currentUser;
+  React.useEffect(() => {
+    getCurrentLanguage();
+  }, []);
+
   const getCurrentLanguage = async () => {
     try {
+      const currentUser = await firebase.auth().currentUser;
       const contactExist = await firebase
         .database()
         .ref("users/" + currentUser.uid)
@@ -40,14 +47,34 @@ const HomepageNavigation = () => {
       contactExist.once("value").then((snapshot) => {
         if (snapshot.exists()) {
           if (snapshot.val().language === "English") {
+            setAccountSettingsText("Account Settings");
+            setEditProfileText("Edit Profile");
+            setLanguageText("Language");
+            setContactUsText("Contact Us");
             english();
           } else if (snapshot.val().language === "German") {
+            setAccountSettingsText("Kontoeinstellungen");
+            setEditProfileText("Profil bearbeiten");
+            setLanguageText("Sprache");
+            setContactUsText("Kontaktieren Sie uns");
             deutsch();
           } else if (snapshot.val().language === "Dutch") {
+            setAccountSettingsText("Accountinstellingen");
+            setEditProfileText("Profiel bewerken");
+            setLanguageText("Taal");
+            setContactUsText("Neem contact met ons op");
             dutch();
           } else if (snapshot.val().language === "Italian") {
+            setAccountSettingsText("Impostazioni account");
+            setEditProfileText("Modifica profilo");
+            setLanguageText("Lingua");
+            setContactUsText("Contattaci");
             italian();
           } else if (snapshot.val().language === "French") {
+            setAccountSettingsText("Paramètres du compte");
+            setEditProfileText("Modifier le profil");
+            setLanguageText("Langue");
+            setContactUsText("Contactez-nous");
             french();
           }
         }
@@ -58,7 +85,6 @@ const HomepageNavigation = () => {
       ]);
     }
   };
-  getCurrentLanguage();
   return (
     <Drawer.Navigator
       drawerContent={(props) => <CustomNavigation {...props} />}
@@ -92,7 +118,7 @@ const HomepageNavigation = () => {
         name="EditProfileScreen"
         component={EditProfileScreen}
         options={{
-          title: global.editProfile,
+          title: editProfileText,
           drawerIcon: ({ focused }) => (
             <Icon
               name="person"
@@ -107,7 +133,8 @@ const HomepageNavigation = () => {
         name="AccountSettingsScreen"
         component={AccountSettingsScreen}
         options={{
-          title: global.accountSettings,
+          title: accountSettingsText,
+
           drawerIcon: ({ focused }) => (
             <Icon
               name="settings"
@@ -121,7 +148,7 @@ const HomepageNavigation = () => {
         name="LanguageScreen"
         component={LanguageScreen}
         options={{
-          title: global.language,
+          title: languageText,
           drawerIcon: ({ focused }) => (
             <Icon
               name="language"
@@ -135,7 +162,7 @@ const HomepageNavigation = () => {
         name="ContactUsScreen"
         component={ContactUsScreen}
         options={{
-          title: global.contactUs,
+          title: contactUsText,
           drawerIcon: ({ focused }) => (
             <Icon
               name="credit-card"

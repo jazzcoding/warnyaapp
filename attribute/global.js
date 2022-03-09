@@ -201,3 +201,15 @@ global.textChooseLanguage = "Choose Language";
 global.textGroupDoesNotExist = "Group does not exist";
 global.textInvialidQRImage = "INVALID QR IMAGE";
 global.textUseImageFromLibrary = "USE IMAGE FROM LIBRARY";
+global.textImageWasSuccessfullyDownloaded = "Image was successfully downloaded";
+global.saveQRCodeToGallery = "Save QR Code to gallery";
+global.textLanguageSuccess = "You have successfully changed your language";
+
+global.textPermissionNotGrantd =
+  " PERMISSION TO ACCESS YOUR CAMERA IS NOT GRANDTED";
+global.textPermissionGoToSettings =
+  "Please go to settings to accept the camera permission.";
+global.textSettings = "Settings";
+global.textRefresh = "Refresh";
+
+global.textPleaseWait = "Please wait...";

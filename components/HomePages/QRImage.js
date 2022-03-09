@@ -115,7 +115,6 @@ const QRImage = ({ route, navigation }) => {
             marginTop: "15%",
           }}
         >
-          {" "}
           {global.makeSureQrCode}
         </Text>
       </View>

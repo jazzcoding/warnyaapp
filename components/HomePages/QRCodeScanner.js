@@ -26,11 +26,15 @@ const QRCodeScanner = ({ navigation }) => {
   const windowHeight = Dimensions.get("screen").height;
   const windowWidth = Dimensions.get("screen").width;
   React.useEffect(() => {
+    getCammeraPermission();
+  }, []);
+
+  const getCammeraPermission = () => {
     (async () => {
       const { status } = await BarCodeScanner.requestPermissionsAsync();
       setHasPermission(status === "granted");
     })();
-  }, []);
+  };
 
   if (hasPermission === null) {
     return <Text>Requesting for camera permission</Text>;
@@ -42,6 +46,8 @@ const QRCodeScanner = ({ navigation }) => {
           padding: 0,
           justifyContent: "center",
           alignItems: "center",
+          flex: 1,
+          padding: 10,
         }}
       >
         <Text
@@ -50,10 +56,10 @@ const QRCodeScanner = ({ navigation }) => {
             fontWeight: "bold",
           }}
         >
-          PERMISSION TO ACCESS YOUR CAMERA IS NOT GRANDTED
+          {global.textPermissionNotGrantd}
         </Text>
-        <Text style={{ fontFamily: "poppins", marginTop: 5 }}>
-          Please go to settings to accept the permission.
+        <Text style={{ marginTop: 5 }}>
+          {global.textPermissionGoToSettings}
         </Text>
         <View style={styles.fixToText}>
           <TouchableOpacity
@@ -67,7 +73,22 @@ const QRCodeScanner = ({ navigation }) => {
             }}
             onPress={() => Linking.openSettings()}
           >
-            <Text style={{ color: "#fff" }}>Settings</Text>
+            <Text style={{ color: "#fff" }}>{global.textSettings}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              borderRadius: 10,
+              alignItems: "center",
+              margin: 5,
+              padding: 5,
+              width: "20%",
+              backgroundColor: "#6495ed",
+            }}
+            onPress={() => {
+              getCammeraPermission();
+            }}
+          >
+            <Text style={{ color: "#fff" }}>{global.textRefresh}</Text>
           </TouchableOpacity>
         </View>
       </View>

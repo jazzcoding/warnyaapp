@@ -21,13 +21,13 @@ const ContactUsScreen = ({ navigation }) => {
       <View style={styles.FitToText}>
         <Image
           style={styles.ImageStyle}
-          source={require("../../assets/contactus/ask.png")}
-          resizeMode="center"
+          source={require("../../assets/contactus/1.png")}
+          resizeMode="contain"
         />
         <Image
           style={styles.ImageStyle}
-          source={require("../../assets/contactus/idea.png")}
-          resizeMode="center"
+          source={require("../../assets/contactus/2.png")}
+          resizeMode="contain"
         />
       </View>
       <View style={styles.FitToText}>
@@ -59,13 +59,13 @@ const ContactUsScreen = ({ navigation }) => {
       <View style={styles.FitToText}>
         <Image
           style={styles.ImageStyle}
-          source={require("../../assets/contactus/bug.png")}
-          resizeMode="center"
+          source={require("../../assets/contactus/3.png")}
+          resizeMode="contain"
         />
         <Image
           style={styles.ImageStyle}
-          source={require("../../assets/contactus/social.png")}
-          resizeMode="center"
+          source={require("../../assets/contactus/4.png")}
+          resizeMode="contain"
         />
       </View>
       <View style={styles.FitToText}>
@@ -142,14 +142,14 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
   },
   ImageStyle: {
-    width: "40%",
-    height: 150,
+    width: 100,
+    height: 100,
+    backgroundColor: "white",
   },
 
   ButtonStyle: {
     width: "60%",
-    margin: 0,
-
+    margin: 20,
     color: "#fff",
     borderRadius: 100,
     alignSelf: "center",

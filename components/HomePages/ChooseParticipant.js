@@ -210,7 +210,7 @@ const ChooseParticipant = ({ route }) => {
         await AdMobInterstitial.showAdAsync();
       } else {
         await AdMobInterstitial.setAdUnitID(
-          "ca-app-pub-5356140400244515/4547274239"
+          "ca-app-pub-5356140400244515/7790169571"
         );
         await AdMobInterstitial.requestAdAsync({
           servePersonalizedAds: false,

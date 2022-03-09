@@ -64,7 +64,7 @@ const HomepageScreen = ({ navigation }) => {
   React.useEffect(() => {
     getUserLanguage();
     if (Platform.OS === "ios") {
-      setAddBanner("ca-app-pub-5356140400244515~2938550185");
+      setAddBanner("ca-app-pub-5356140400244515/6908015512");
       // Display an interstitial
     } else {
       setAddBanner("ca-app-pub-5356140400244515/5596758332");

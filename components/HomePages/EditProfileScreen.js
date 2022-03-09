@@ -80,7 +80,7 @@ const EditProfileScreen = ({ navigation }) => {
         await AdMobInterstitial.showAdAsync();
       } else {
         await AdMobInterstitial.setAdUnitID(
-          "ca-app-pub-5356140400244515/4547274239"
+          "ca-app-pub-5356140400244515/7790169571"
         );
         await AdMobInterstitial.requestAdAsync({
           servePersonalizedAds: false,
@@ -332,7 +332,7 @@ const styles = StyleSheet.create({
   ButtonStyle: {
     borderWidth: 1,
     borderColor: "#707070",
-    minWidth: "100%",
+    minWidth: "95%",
     color: "#fff",
     borderRadius: 100,
     alignSelf: "center",
@@ -346,10 +346,10 @@ const styles = StyleSheet.create({
     borderColor: "#707070",
     marginLeft: 20,
     height: 45,
-    marginRight: 10,
+    marginRight: 20,
     paddingLeft: 10,
     backgroundColor: "#fff",
-    marginBottom: 10,
+    marginBottom: 5,
   },
   TextStyle: {
     width: "100%",

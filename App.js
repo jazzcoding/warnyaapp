@@ -13,6 +13,7 @@ import LoadingPage from "./attribute/LoadingPage";
 import LanguageNavigation from "./navigation/LanguangeNavigation";
 import * as Notifications from "expo-notifications";
 
+
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
     shouldShowAlert: true,
@@ -41,30 +42,21 @@ export default function App() {
       ? firebase.initializeApp(firebaseConfig).firestore()
       : firebase.app().firestore();
 
-    notificationListener.current =
-      Notifications.addNotificationReceivedListener((notification) => {
-        setNotification(notification);
-      });
-    responseListener.current =
-      Notifications.addNotificationResponseReceivedListener((response) => {
-        console.log(response);
-      });
     setTimeout(async () => {
       const currentUser = await firebase.auth().currentUser;
       if (currentUser !== null) {
-        setUserState("SignedIn");
+        try {
+          setUserState("SignedIn");
+        } catch (err) {
+          console.log(err);
+        }
       } else {
         setUserState("Login");
       }
     }, 5000);
-    return () => {
-      Notifications.removeNotificationSubscription(
-        notificationListener.current
-      );
-      Notifications.removeNotificationSubscription(responseListener.current);
-    };
   }, []);
 
+  
   //initialize firebase
   const [userState, setUserState] = React.useState(null);
   const authContext = React.useMemo(() => ({

@@ -97,7 +97,7 @@ const ChangeLanguageScreen = ({ navigation }) => {
         await AdMobInterstitial.showAdAsync();
       } else {
         await AdMobInterstitial.setAdUnitID(
-          "ca-app-pub-5356140400244515/4547274239"
+          "ca-app-pub-5356140400244515/7790169571"
         );
         await AdMobInterstitial.requestAdAsync({
           servePersonalizedAds: false,
@@ -114,10 +114,14 @@ const ChangeLanguageScreen = ({ navigation }) => {
         .database()
         .ref("users/" + currentUser.uid)
         .update({ language });
-      alert("You have successfully changed your language.");
+      Alert.alert(global.alertSuccessTitle, global.textLanguageSuccess, [
+        { text: "Ok", onPress: () => console.log("No") },
+      ]);
       showAds();
     } catch (err) {
-      Alert.alert("There is something wrong!!!!", err.message);
+      Alert.alert(global.alertErrorTitle, global.alertCatch, [
+        { text: "Ok", onPress: () => console.log("No") },
+      ]);
     }
   };
   const toggleOverlay = () => {
